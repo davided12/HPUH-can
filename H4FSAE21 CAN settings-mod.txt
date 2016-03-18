@@ -1,0 +1,69 @@
+﻿
+Versione FW H4FSAE20_21
+
+--------------------------------------------------------
+MESSAGGI CAN
+--------------------------------------------------------
+
+Velocita 	: 1 Mbit
+Messaggi 	: 11 bit standard
+Formato dati	: INTEL ( Low First Byte )
+
+--------------------------------------------------------
+
+ID=0x100 ( 100 Hz )
+
+POS=0	SIZE=16	UNSIGNED REVCNT = bit/1 	revs
+POS=16	SIZE=16	UNSIGNED RPM    = bit/1 	rev/min
+POS=32	SIZE=16 UNSIGNED TPS    = bit/10 	%
+POS=48	SIZE=16 SIGNED   MAP    = bit/1 	mBar
+--------------------------------------------------------
+
+ID=0x101 ( 10 Hz )
+
+POS=0	SIZE=8	UNSIGNED TH2O    = bit/1 - 40 	�C
+POS=8	SIZE=8  UNSIGNED TAIR    = bit/1 - 40 	�C
+POS=16	SIZE=8  UNSIGNED TOIL    = bit/1 - 40 	�C
+POS=24	SIZE=8  UNSIGNED VBB1    = bit*0.0705 	Volt
+POS=32	SIZE=8  UNSIGNED VBB2    = bit*0.0705 	Volt
+POS=40	SIZE=8  UNSIGNED VBB3    = bit*0.0705 	Volt
+POS=48	SIZE=16 SIGNED   BARO    = bit/1 	mBar   (pressione atm)
+--------------------------------------------------------
+
+ID=0x102 ( 10 Hz Athena 100 Hz Develop )
+
+POS=0	SIZE=8	UNSIGNED LAMBDA1 AVG  = bit/100 Lambda
+POS=8	SIZE=8  UNSIGNED LAMBDA1 RAW  = bit/100 Lambda
+POS=16	SIZE=8  UNSIGNED LAMBDA2 AVG  = bit/100 Lambda
+POS=24	SIZE=8  UNSIGNED LAMBDA2 RAW  = bit/100 Lambda
+POS=32	SIZE=16 UNSIGNED KLAMBDA1     = bit/656 n	
+POS=48	SIZE=16 UNSIGNED KLAMBDA2     = bit/656 n	
+--------------------------------------------------------
+
+ID=0x103 ( 10 Hz Athena 100 Hz Develop )
+
+POS=0	SIZE=16	UNSIGNED INJ_LOW     = bit/2 	us
+POS=16	SIZE=16	UNSIGNED INJ_HIGH    = bit/2 	us
+POS=32	SIZE=16	SIGNED   SPARK_1     = bit/10	deg
+POS=48	SIZE=16 UNSIGNED PHASE_LOW   = bit/10 	deg
+--------------------------------------------------------
+
+ID=0x104 ( 10 Hz Athena 100 Hz Develop )
+
+POS=0	SIZE=16	UNSIGNED SPEED1       = bit/100 Kmh
+POS=16	SIZE=16 UNSIGNED SPEED2       = bit/100	Kmh
+POS=32	SIZE=16 SIGNED	 SLIP%        = bit/100	%
+POS=48	SIZE=8  SIGNED   TC_INDEX     = bit/1
+POS=56	SIZE=8  UNSIGNED SLIP*D       = bit/1
+--------------------------------------------------------
+	
+ID=0x105 ( 10 Hz Athena 100 Hz Develop )
+
+POS=0	SIZE=16	SIGNED  DTPS+ 			  = bit/2 WTPS%
+POS=16	SIZE=16 SIGNED  DTPS- 			  = bit/2 WTPS%
+POS=32	SIZE=16 SIGNED	DECAYINJ(+) - DECAYINJ(-) = bit/1 revs 
+POS=48	SIZE=16 SIGNED	DECAYIGN(+) - DECAYIGN(-) = bit/1 revs
+--------------------------------------------------------
+	
+
+	
